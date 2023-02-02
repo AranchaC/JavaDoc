@@ -38,7 +38,7 @@ public class Multimedia {
 	}	
 	/**
 	 * Asigna valor a título.
-	 * @param título asigna valor al atributo.
+	 * @param título asigna valor del parámetro a título.
 	 */
 	public void setTítulo(String título) {
 		this.título = título;
@@ -52,7 +52,7 @@ public class Multimedia {
 	}	
 	/**
 	 * Asigna valor al autor.
-	 * @param autor asigna valor al atributo.
+	 * @param autor asigna valor del parámetro a autor.
 	 */
 	public void setAutor(String autor) {
 		this.autor = autor;
@@ -66,7 +66,7 @@ public class Multimedia {
 	}	
 	/**
 	 * Asigna valor a duración.
-	 * @param duración asigna valor al atributo.
+	 * @param duración asigna valor del parámetro a duración.
 	 */
 	public void setDuración(double duración) {
 		this.duración = duración;
@@ -80,7 +80,7 @@ public class Multimedia {
 	}	
 	/**
 	 * Asigna valor a formato.
-	 * @param formato asigna valor al atributo.
+	 * @param formato asigna del parámetro a formato.
 	 */
 	public void setFormato(Formato formato) {
 		this.formato = formato;
