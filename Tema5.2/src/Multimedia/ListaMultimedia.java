@@ -2,10 +2,10 @@ package Multimedia;
 
 import java.util.Arrays;
 /**
- * Clase ListaMultimedia: contiene un array de objetos de tipo Multimedia.
+ * Class ListaMultimedia: contiene un array de objetos de tipo Multimedia.
  * @author AranchaCM
  * @version 1.0
- * @see refenrence PruebaMultimedia
+ * @see reference PruebaMultimedia
  */
 public class ListaMultimedia {
 	//Atributos

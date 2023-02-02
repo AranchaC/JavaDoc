@@ -1,29 +1,28 @@
 package Multimedia;
 /**
- * Clase Película: define objetos de tipo Película con métodos y atributos heredados
+ * Class Pelicula: define objetos de tipo Película con métodos y atributos heredados
  * de Multimedia y con la interfaz Comparable implementada.
  * @author AranchaCM
  * @version 1.0
- * @see refenrence PruebaMultimedia
+ * @see reference PruebaMultimedia, Multimedia.
  */
-public class Película extends Multimedia implements Comparable<Película>{
+public class Pelicula extends Multimedia implements Comparable<Pelicula>{
 	//atributos
 	/** actor principal, actriz principal. */
 	protected String actorPrincipal, actrizPrincipal;
 	/**
 	 * Constructor de Película, con 6 parámetros/atributos:
-	 * 2 propios y 4 heredados de Multimedia.
-	 *
-	 * @param título the título
+	 * 2 propios y 4 heredados de Multimedia. Donde se inicializan las variables.
+	 * @param titulo the título
 	 * @param autor the autor
 	 * @param duración the duración
 	 * @param formato the formato
 	 * @param actorPrincipal the actor principal
 	 * @param actrizPrincipal the actriz principal
 	 */
-	public Película(String título, String autor, double duración, Formato formato, String actorPrincipal,
+	public Pelicula(String titulo, String autor, double duracion, Formato formato, String actorPrincipal,
 			String actrizPrincipal) {
-		super(título, autor, duración, formato);
+		super(titulo, autor, duracion, formato);
 		this.actorPrincipal = actorPrincipal;
 		this.actrizPrincipal = actrizPrincipal;
 	}//cierre Constructor
@@ -56,9 +55,9 @@ public class Película extends Multimedia implements Comparable<Película>{
 		this.actrizPrincipal = actrizPrincipal;
 	}
 	/**
-	 * Método toString que devuelve cadena para sacar por pantalla 
-	 * la info del objeto con todos los atributos.
-	 * @return cadena string con cada atributo.
+	 * Método toString que devuelve cadena para sacar por pantalla la info del objeto 
+	 * con todos los atributos. Después de comprobar si hay actor y actriz.
+	 * @return cadena string con cada atributo + toString de clase padre.
 	 */
 	@Override
 	public String toString() {
@@ -78,29 +77,30 @@ public class Película extends Multimedia implements Comparable<Película>{
 			actores = "ERROR: Escribe al menos uno";			
 		}
 		return super.toString()+ " Protagonistas: "+actores+"\n\n";
-	}
-
+	}//cierre toString
 	/**
-	 * Compare to.
-	 *
-	 * @param o the o
-	 * @return the int
+	 * Compare to. Compara autor y luego duración para que se ordene la lista con 
+	 * estos atributos respectivamente.
+	 * @param o objeto para comparar con los ifs.
+	 * @return <ul>
+     *          <li>-1: si es menor</li>
+     *          <li>1: si es mayor</li>
+     *          <li>0: si es igual</li>
+     *          </ul>
 	 */
 	@Override
-	public int compareTo(Película o) {
+	public int compareTo(Pelicula o) {
 		if (this.autor != o.getAutor()) {
 			return this.autor.compareToIgnoreCase(o.getAutor());
 		}
-		if (this.duración < o.getDuración()) {
+		if (this.duracion < o.getDuracion()) {
 			return -1;
 		}//if
-		else if (this.duración > o.getDuración()) {
+		else if (this.duracion > o.getDuracion()) {
 			return 1;
 		}//else
 		return 0;		
-	}
-	
-
+	}//cierre comapreTo
 		//return (int) ((this.duración*1000) - (o.duración*1000));
 }
 

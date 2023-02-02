@@ -2,46 +2,47 @@ package Multimedia;
 
 import java.util.Objects;
 /**
- * Clase Multimedia: define objetos con atributos String, double y enum. 
+ * Class Multimedia: define objetos con atributos String, double y enum. 
  * que reciben al crear el objeto.
  * @author AranchaCM
  * @version 1.0
- * @see refenrence PruebaMultimedia
+ * @see reference PruebaMultimedia
  */
 public class Multimedia {
 	//Atributos	
 	/** Título,autor, duración y Formato del objeto multimedia. */
-	protected String título, autor;
-	protected double duración;
+	protected String titulo, autor;
+	protected double duracion;
 	protected Formato formato;
 	
 	/**
-	 * Constructor del objeto Multimedia con 4 parámetros (los atributos).
-	 * @param título del objeto multimedia.
+	 * Constructor del objeto Multimedia con 4 parámetros (los atributos) donde
+	 * se inicializan las variables.
+	 * @param titulo del objeto multimedia.
 	 * @param autor del objeto multimedia.
 	 * @param duración del objeto multimedia.
 	 * @param formato del objeto multimedia.
 	 */
-	public Multimedia(String título, String autor, double duración, Formato formato ) {
+	public Multimedia(String titulo, String autor, double duracion, Formato formato ) {
 		super();
-		this.título = título;
+		this.titulo = titulo;
 		this.autor = autor;
-		this.duración = duración;
+		this.duracion = duracion;
 		this.formato = formato;
 	}//cierre constructor Multimedia	
 	/**
 	 * Devuelve el título del objeto.
-	 * @return título
+	 * @return titulo
 	 */
-	public String getTítulo() {
-		return título;
+	public String getTitulo() {
+		return titulo;
 	}	
 	/**
 	 * Asigna valor a título.
-	 * @param título asigna valor del parámetro a título.
+	 * @param titulo asigna valor del parámetro a título.
 	 */
-	public void setTítulo(String título) {
-		this.título = título;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}	
 	/**
 	 * Devuelve el autor.
@@ -61,15 +62,15 @@ public class Multimedia {
 	 * Devuelve la duración.
 	 * @return duración
 	 */
-	public double getDuración() {
-		return duración;
+	public double getDuracion() {
+		return duracion;
 	}	
 	/**
 	 * Asigna valor a duración.
-	 * @param duración asigna valor del parámetro a duración.
+	 * @param duracion asigna valor del parámetro a duración.
 	 */
-	public void setDuración(double duración) {
-		this.duración = duración;
+	public void setDuracion(double duracion) {
+		this.duracion = duracion;
 	}	
 	/**
 	 * Devuelve el formato.
@@ -92,7 +93,7 @@ public class Multimedia {
 	 */
 	@Override
 	public String toString() {
-		return "Título= " + título + "\n Autor= " + autor + "\n Duración= " + duración+" \n Formato= "+formato+"\n" ; 
+		return "Título= " + titulo + "\n Autor= " + autor + "\n Duración= " + duracion+" \n Formato= "+formato+"\n" ; 
 	}
 	/**
 	 * Método Equals que compara dos objetos en base al autor y al título.
@@ -111,7 +112,7 @@ public class Multimedia {
 		if (getClass() != obj.getClass())
 			return false;*/
 		Multimedia other = (Multimedia) obj;
-		return Objects.equals(autor, other.autor) && Objects.equals(título, other.título);
+		return Objects.equals(autor, other.autor) && Objects.equals(titulo, other.titulo);
 	}//cierre boolean equals	
 	
 }
